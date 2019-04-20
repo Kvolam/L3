@@ -6,15 +6,15 @@ import javax.swing.*;
 
 public class View {
 
-    private static JTextField NameOfStudent;
-    private static JTextField SortOfCoffee;
-    private static JTextField WSugar;
-    private static JTextField VTeapot;
+    private static JTextField nameOfStudent;
+    private static JTextField sortOfCoffee;
+    private static JTextField wSugar;
+    private static JTextField vTeapot;
     public static JButton calculateButton;
-    private static JTextField WCoffee;
-    public static JButton CoffeeButton;
-    public static JButton TeaButton;
-    public static JButton CoffeeWithMilkButton;
+    private static JTextField wDrink;
+    public static JButton coffeeButton;
+    public static JButton teaButton;
+    public static JButton coffeeWithMilkButton;
     public static void addComponents(Container pane, String TypeOfDrink) {
         pane.setLayout(new GridBagLayout());
         pane.setLayout(new GridBagLayout());
@@ -27,19 +27,19 @@ public class View {
         constraints.gridx = 1;
         constraints.gridy = 0;
         constraints.gridwidth = 2;
-        NameOfStudent = new JTextField();
-        pane.add(NameOfStudent, constraints);
+        nameOfStudent = new JTextField();
+        pane.add(nameOfStudent, constraints);
         constraints.gridx = 0;
         constraints.gridy = 2;
         pane.add(new JLabel("Объём"), constraints);
         constraints.gridx = 1;
         constraints.gridy = 2;
         constraints.gridwidth = 2;
-        VTeapot = new JTextField();
-        pane.add(VTeapot, constraints);
+        vTeapot = new JTextField();
+        pane.add(vTeapot, constraints);
         constraints.gridx = 0;
         constraints.gridy = 3;
-        if(TypeOfDrink=="Чай") {
+        if(TypeOfDrink.equals("Чай")) {
             pane.add(new JLabel("Сорт чая"), constraints);
             constraints.gridx = 0;
             constraints.gridy = 5;
@@ -57,22 +57,22 @@ public class View {
         constraints.gridx = 1;
         constraints.gridy = 3;
         constraints.gridwidth = 2;
-        SortOfCoffee = new JTextField();
-        pane.add(SortOfCoffee, constraints);
+        sortOfCoffee = new JTextField();
+        pane.add(sortOfCoffee, constraints);
         constraints.gridx = 0;
         constraints.gridy = 4;
         pane.add(new JLabel("Кол-во сахара"), constraints);
         constraints.gridx = 1;
         constraints.gridy = 4;
         constraints.gridwidth = 2;
-        WSugar = new JTextField();
-        pane.add(WSugar, constraints);
+        wSugar = new JTextField();
+        pane.add(wSugar, constraints);
 
         constraints.gridx = 1;
         constraints.gridy = 5;
         constraints.gridwidth = 2;
-        WCoffee = new JTextField();
-        pane.add(WCoffee, constraints);
+        wDrink = new JTextField();
+        pane.add(wDrink, constraints);
         constraints.gridx = 0;
         constraints.gridy = 6;
         constraints.gridwidth = 2;
@@ -89,36 +89,53 @@ public class View {
         constraints.gridx = 0;
         constraints.gridy = 0;
         constraints.gridwidth = 2;
-        CoffeeButton = new JButton("Сделать кофе");
-        pane.add(CoffeeButton, constraints);
+        coffeeButton = new JButton("Сделать кофе");
+        pane.add(coffeeButton, constraints);
         constraints.gridx = 0;
         constraints.gridy = 1;
         constraints.gridwidth = 2;
-        TeaButton = new JButton("Сделать чай");
-        pane.add(TeaButton, constraints);
+        teaButton = new JButton("Сделать чай");
+        pane.add(teaButton, constraints);
         constraints.gridx = 0;
         constraints.gridy = 2;
         constraints.gridwidth = 2;
-        CoffeeWithMilkButton = new JButton("Сделать кофе с молоком");
-        pane.add(CoffeeWithMilkButton, constraints);
+        coffeeWithMilkButton = new JButton("Сделать кофе с молоком");
+        pane.add(coffeeWithMilkButton, constraints);
     }
 
 
 
-    static public String getNameOfStudent (){
-        return NameOfStudent.getText();
+    static public String getNameOfStudent ()throws ExceptionString{
+        if(nameOfStudent.getText().matches("(?i).*[A-zА-я].*"))
+        {
+            return nameOfStudent.getText();
+        }
+        else throw new ExceptionString("Некоректное имя студента");
     }
-    static public String getSortOfCoffee(){
-        return SortOfCoffee.getText();
+    static public String getSortOfCoffee()throws  ExceptionString {
+        if(sortOfCoffee.getText().matches("(?i).*[A-zА-я].*")) {
+            return sortOfCoffee.getText();
+        }
+        else throw new ExceptionString("Некоректный сорт кофе/чая");
     }
-    static public double getWSugar(){
-        return Double.parseDouble(WSugar.getText());
+    static public double getWSugar() throws  ExceptionString{
+        if(wSugar.getText().matches("(?i).*[0-9,.].*"))
+        {
+          return Double.parseDouble(wSugar.getText());
+        }
+        else throw new ExceptionString("Неверное число в поле Кол-во сахара");
     }
-    static public int getWCoffee(){
-        return Integer.parseInt(WCoffee.getText());
+    static public int getWDrink() throws ExceptionString{
+        if(wDrink.getText().matches("(?i).*[0-9,.].*")){
+            return Integer.parseInt(wDrink.getText());
+        }
+        else throw new ExceptionString("Неверное число в поле кол-во кофе/чая");
     }
-    static  public int getVTeapot(){
-        return Integer.parseInt(VTeapot.getText());
+    static  public int getVTeapot() throws ExceptionString{
+        if(vTeapot.getText().matches("(?i).*[0-9,.].*")){
+            return Integer.parseInt(vTeapot.getText());
+        }
+        else throw new ExceptionString("Неверное число в поле объём напитка");
     }
 
 }

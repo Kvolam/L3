@@ -1,15 +1,11 @@
 public  class LooseObject extends Thing {
 
-    public void ToPour(Cup cup){
-        cup.Take(this.Weight);
+    public void toPour(Cup cup){
+        cup.take(this.weight);
     }
 
     @Override
     public double getWeight() {
-        return this.Weight;
-    }
-    @Override
-    public void setWeight(double weight) {
-        this.Weight=weight;
+        return this.weight;
     }
 }

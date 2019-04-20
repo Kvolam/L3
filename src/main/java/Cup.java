@@ -1,45 +1,34 @@
 public class Cup extends Thing {
-    private int Volume;
-    private String Content;
-    public Cup(){
-        this.Volume=0;
-        this.Content=null;
+    private int volume;
+    private String content;
+    public Cup() {
+        this.volume = 0;
+        this.content = null;
     }
-    /*public void ToFill(int Volume){
-        this.Volume+=Volume;
-    }
-    public void ToFill(int Weight,String Content){
-        if(this.Content==null)
-            this.Content=Content;
-        else
-            this.Content+=", "+Content;
-        this.setWeight(this.getWeight()+Weight);
-    }*/
     public String getContent(){
-        return this.Content;
+        return this.content;
     }
 
-    public void Take(String content){
-        if(this.Content==null)
-            this.Content=content;
+    public void take(String content){
+        if(this.content==null)
+            this.content=content;
         else
-            this.Content+=content;
+            this.content+=content;
     }
 
-    public void Take(int volume){
-        this.Volume+=volume;
+    public void take(int volume){
+        this.volume+=volume;
     }
 
-    public void Take(double Weight){
-        this.Weight=Weight;
+    public void take(double weight){
+        this.weight=weight;
     }
     @Override
      public double getWeight() {
-        return 0;
+        return this.weight;
     }
 
-    @Override
-    public void setWeight(double weight) {
-        this.Weight=weight;
+    public int getVolume(){
+        return this.volume;
     }
 }

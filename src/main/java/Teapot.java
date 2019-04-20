@@ -1,22 +1,22 @@
 public class Teapot extends Thing{
-    private double Temperature;
-    private int Volume;
-    public Teapot(double Temperature, int Volume) {
-        this.Temperature=Temperature;
-        this.Volume=Volume;
+    private double temperature;
+    private int volume;
+    public Teapot(double temperature, int volume) {
+        this.temperature=temperature;
+        this.volume=volume;
     }
-    public void ToPourWater(Cup CupOfDrink) {
-        CupOfDrink.Take(this.Volume);
+    public void toPourWater(Cup cupOfDrink) {
+        cupOfDrink.take(this.volume);
     }
-    public void ToFillWater(int Volume, Cup CupOfCoffee) {
-        this.Volume=Volume;
-        this.HeatUpWater();
-        this.ToPourWater(CupOfCoffee);
+    public void toFillWater(int volume, Cup cupOfCoffee) {
+        this.volume=volume;
+        this.heatUpWater();
+        this.toPourWater(cupOfCoffee);
     }
-    private void HeatUpWater() {
-        while(this.Temperature<100)
+    private void heatUpWater() {
+        while(this.temperature<100)
         {
-            this.Temperature+=this.Temperature/100000000;
+            this.temperature+=this.temperature/100000000;
         }
     }
 
@@ -25,7 +25,5 @@ public class Teapot extends Thing{
     public double getWeight() {
         return 0;
     }
-    @Override
-    public void setWeight(double weight) {
-    }
+
 }

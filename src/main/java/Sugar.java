@@ -1,13 +1,14 @@
 public class Sugar extends LooseObject{
-    public Sugar(double Weight) {
-        this.Weight=Weight;
+    public Sugar(double weight) {
+
+        this.weight=weight;
     }
-    public void ToPourSugar(Cup CupOfDrink){
-        this.ToPour(CupOfDrink);
-        if(this.Weight==0)
-            CupOfDrink.Take(" без сахара");
+    public void toPourSugar(Cup cupOfDrink){
+        this.toPour(cupOfDrink);
+        if(this.weight==0)
+            cupOfDrink.take(" без сахара");
         else
-            CupOfDrink.Take(" c сахаром");
+            cupOfDrink.take(" с сахаром");
     }
 
 }

@@ -1,12 +1,12 @@
 public class Tea extends LooseObject {
-    private String Sort;
-    Tea(String Sort, int Weight){
-        this.Sort=Sort;
-        this.Weight=Weight;
+    private String sort;
+    Tea(String sort, int weight){
+        this.sort=sort;
+        this.weight=weight;
     }
-    public void ToPourTea(Cup CupOfTea){
-        this.ToPour(CupOfTea);
-        CupOfTea.Take("Чай: "+this.Sort);
+    public void toPourTea(Cup cupOfTea){
+        this.toPour(cupOfTea);
+        cupOfTea.take("Чай: "+this.sort);
     }
 
 }

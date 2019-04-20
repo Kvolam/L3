@@ -1,12 +1,12 @@
 public class Coffee extends LooseObject {
-    private String Taste;
-    public Coffee(String Taste, int Weight) {
-        this.Weight=Weight;
-        this.Taste=Taste;
+    private String taste;
+    public Coffee(String taste, int weight) {
+        this.weight=weight;
+        this.taste=taste;
     }
-    public void ToPourCoffee(Cup CupOfCoffee){
-        this.ToPour(CupOfCoffee);
-        CupOfCoffee.Take("Кофе: "+this.Taste);
+    public void toPourCoffee(Cup CupOfCoffee){
+        this.toPour(CupOfCoffee);
+        CupOfCoffee.take("Кофе: "+this.taste);
     }
 
 }

@@ -1,27 +1,32 @@
+import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class CupTest {
-   /* @org.junit.Test
-    public void toFill() {
+    @org.junit.Test
+    public void takeS() {
         Cup cup = new Cup();
-        cup.ToFill(100,"Sugar");
+        cup.take("Sugar");
         String actual = cup.getContent();
         String expected = "Sugar";
         assertEquals(actual,expected);
-        int V_Actual = cup.getWeight();
-        int V_Expected=100;
-        assertEquals(V_Expected,V_Actual);
     }
 
     @org.junit.Test
-    public void toFill1() {
+    public void takeI() {
         Cup cup = new Cup();
-        cup.ToFill(200,200);
+        cup.take(200);
         int actual = cup.getVolume();
         int expected = 200;
         assertEquals(actual,expected);
-        int V_Actual = cup.getVolume();
-        int V_Expected=200;
-        assertEquals(V_Expected,V_Actual);
-    }*/
+    }
+
+    @Test
+    public void takeD() {
+        Cup cup = new Cup();
+        cup.take(10);
+        double W_actual = cup.getWeight();
+        double W_expected = 10;
+        assertEquals(W_actual,W_expected,0.2);
+    }
 }

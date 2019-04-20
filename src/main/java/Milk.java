@@ -1,7 +1,7 @@
 public class Milk extends  Thing{
     Milk(){}
-    public void ToPourMilk(Cup cup){
-        cup.Take(" с молоком и");
+    public void toPourMilk(Cup cup){
+        cup.take(" с молоком и");
     }
 
     @Override
@@ -9,7 +9,4 @@ public class Milk extends  Thing{
         return 0;
     }
 
-    @Override
-    void setWeight(double weight) {
-    }
 }

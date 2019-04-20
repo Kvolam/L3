@@ -4,20 +4,20 @@ public class Student {
     {
         this.Name=Name;
     }
-    public void MakeCoffee(Teapot teapot, Coffee coffee, Cup cup, Sugar sugar, int Volume) {
-        coffee.ToPourCoffee(cup);
-        sugar.ToPourSugar(cup);
-        teapot.ToFillWater(Volume, cup);
+    public void makeCoffee(Teapot teapot, Coffee coffee, Cup cup, Sugar sugar, int Volume) {
+        coffee.toPourCoffee(cup);
+        sugar.toPourSugar(cup);
+        teapot.toFillWater(Volume, cup);
     }
-    public void MakeTea(Teapot teapot, Tea tea, Cup cup, Sugar sugar, int Volume){
-        tea.ToPourTea(cup);
-        sugar.ToPourSugar(cup);
-        teapot.ToFillWater(Volume, cup);
+    public void makeTea(Teapot teapot, Tea tea, Cup cup, Sugar sugar, int Volume){
+        tea.toPourTea(cup);
+        sugar.toPourSugar(cup);
+        teapot.toFillWater(Volume, cup);
     }
-    public void MakeCoffeeWithMilk(Teapot teapot, Coffee coffee, Cup cup, Sugar sugar, Milk milk, int Volume){
-        coffee.ToPourCoffee(cup);
-        milk.ToPourMilk(cup);
-        sugar.ToPourSugar(cup);
-        teapot.ToFillWater(Volume, cup);
+    public void makeCoffeeWithMilk(Teapot teapot, Coffee coffee, Cup cup, Sugar sugar, Milk milk, int Volume){
+        coffee.toPourCoffee(cup);
+        milk.toPourMilk(cup);
+        sugar.toPourSugar(cup);
+        teapot.toFillWater(Volume, cup);
     }
 }
