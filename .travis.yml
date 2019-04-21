@@ -11,11 +11,7 @@ after_success:
  - echo "Build was successful. $TRAVIS_TEST_RESULT"
 after_failure:
  - echo "Build was failed"
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: 764e51f0a72f6a086338a3117f6e3b3c728f3d50
-  keep_history: true
+
 branches:
   only:
     - master
