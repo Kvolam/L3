@@ -43,7 +43,7 @@ public class UserInterface {
                         JOptionPane.showMessageDialog(null, model.contentOF()+" готов");
                 }
             }
-            catch (ExceptionString ex)
+            catch (Exception ex)
             {
                 JOptionPane.showMessageDialog(null,ex.getMessage());
             }

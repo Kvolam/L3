@@ -20,7 +20,7 @@ public class Model {
          coffee = new Coffee(View.getSortOfCoffee(),View.getWDrink());
          this.student.makeCoffee(this.teapot,coffee,this.cup,this.sugar, View.getVTeapot());
          ready=true;
-         } catch (ExceptionString ex) {
+         } catch (Exception ex) {
              JOptionPane.showMessageDialog(null,ex.getMessage());
          }
         return ready;
@@ -31,8 +31,9 @@ public class Model {
         try {
             Tea tea = new Tea(View.getSortOfCoffee(), View.getWDrink());
             this.student.makeTea(this.teapot, tea, this.cup, this.sugar, View.getVTeapot());
+            ready = true;
         }
-        catch (ExceptionString ex){
+        catch (Exception ex){
             JOptionPane.showMessageDialog(null,ex.getMessage());
         }
         return ready;
@@ -46,7 +47,7 @@ public class Model {
             this.student.makeCoffeeWithMilk(this.teapot, coffee, this.cup, this.sugar, milk, View.getVTeapot());
             ready=true;
         }
-        catch(ExceptionString ex){
+        catch(Exception ex){
             JOptionPane.showMessageDialog(null,ex.getMessage());
         }
         return ready;

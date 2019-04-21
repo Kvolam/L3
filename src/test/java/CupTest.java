@@ -3,7 +3,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CupTest {
-    @org.junit.Test
+    @Test
     public void takeS() {
         Cup cup = new Cup();
         cup.take("Sugar");
@@ -12,7 +12,7 @@ public class CupTest {
         assertEquals(actual,expected);
     }
 
-    @org.junit.Test
+    @Test
     public void takeI() {
         Cup cup = new Cup();
         cup.take(200);
@@ -24,7 +24,7 @@ public class CupTest {
     @Test
     public void takeD() {
         Cup cup = new Cup();
-        cup.take(10);
+        cup.take(10.0);
         double W_actual = cup.getWeight();
         double W_expected = 10;
         assertEquals(W_actual,W_expected,0.2);

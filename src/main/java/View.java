@@ -105,37 +105,37 @@ public class View {
 
 
 
-    static public String getNameOfStudent ()throws ExceptionString{
+    static public String getNameOfStudent ()throws Exception{
         if(nameOfStudent.getText().matches("(?i).*[A-zА-я].*"))
         {
             return nameOfStudent.getText();
         }
-        else throw new ExceptionString("Некоректное имя студента");
+        else throw new Exception("Некоректное имя студента");
     }
-    static public String getSortOfCoffee()throws  ExceptionString {
+    static public String getSortOfCoffee()throws  Exception{
         if(sortOfCoffee.getText().matches("(?i).*[A-zА-я].*")) {
             return sortOfCoffee.getText();
         }
-        else throw new ExceptionString("Некоректный сорт кофе/чая");
+        else throw new Exception("Некоректный сорт кофе/чая");
     }
-    static public double getWSugar() throws  ExceptionString{
+    static public double getWSugar() throws  Exception{
         if(wSugar.getText().matches("(?i).*[0-9,.].*"))
         {
           return Double.parseDouble(wSugar.getText());
         }
-        else throw new ExceptionString("Неверное число в поле Кол-во сахара");
+        else throw new Exception("Неверное число в поле Кол-во сахара");
     }
-    static public int getWDrink() throws ExceptionString{
+    static public int getWDrink() throws Exception{
         if(wDrink.getText().matches("(?i).*[0-9,.].*")){
             return Integer.parseInt(wDrink.getText());
         }
-        else throw new ExceptionString("Неверное число в поле кол-во кофе/чая");
+        else throw new Exception("Неверное число в поле кол-во кофе/чая");
     }
-    static  public int getVTeapot() throws ExceptionString{
+    static  public int getVTeapot() throws Exception{
         if(vTeapot.getText().matches("(?i).*[0-9,.].*")){
             return Integer.parseInt(vTeapot.getText());
         }
-        else throw new ExceptionString("Неверное число в поле объём напитка");
+        else throw new Exception("Неверное число в поле объём напитка");
     }
 
 }

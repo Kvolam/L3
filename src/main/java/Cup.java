@@ -21,7 +21,7 @@ public class Cup extends Thing {
     }
 
     public void take(double weight){
-        this.weight=weight;
+        this.weight+=weight;
     }
     @Override
      public double getWeight() {

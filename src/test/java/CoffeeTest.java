@@ -15,6 +15,5 @@ public class CoffeeTest {
         String actual = cup.getContent();
         String expected = "Кофе: Americano";
         assertEquals(actual,expected);
-
     }
 }
