@@ -14,7 +14,7 @@ after_failure:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $764e51f0a72f6a086338a3117f6e3b3c728f3d50
+  github_token: 764e51f0a72f6a086338a3117f6e3b3c728f3d50
   keep_history: true
 branches:
   only:
