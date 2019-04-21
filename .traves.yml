@@ -1,0 +1,17 @@
+sudo: false
+language: java
+install: true
+java:
+  - 11
+script:
+./mvnw clean install
+after_script:
+ - echo "Script finished"
+after_success:
+ - echo "Build was successful. $TRAVIS_TEST_RESULT"
+after_failure:
+ - echo "Build was failed"
+
+branches:
+  only:
+    - master
