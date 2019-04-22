@@ -119,21 +119,35 @@ public class View {
         else throw new Exception("Некоректный сорт кофе/чая");
     }
     static public double getWSugar() throws  Exception{
-        if(wSugar.getText().matches("(?i).*[0-9,.].*"))
+        double temp;
+        if(wSugar.getText().matches("(?i).*[0-9,].*"))
         {
-          return Double.parseDouble(wSugar.getText());
+          temp= Double.parseDouble(wSugar.getText());
+          if(temp>=0) {
+              return temp;
+          }
+          else throw new Exception("Отрицательная масса сахара");
         }
         else throw new Exception("Неверное число в поле Кол-во сахара");
     }
     static public int getWDrink() throws Exception{
-        if(wDrink.getText().matches("(?i).*[0-9,.].*")){
-            return Integer.parseInt(wDrink.getText());
+        int temp;
+        if(wDrink.getText().matches("(?i).*[0-9].*")){
+            temp= Integer.parseInt(wDrink.getText());
+            if(temp>0){
+                return temp;
+            }
+            else throw new Exception("Отрицательый масса напитка");
         }
         else throw new Exception("Неверное число в поле кол-во кофе/чая");
     }
     static  public int getVTeapot() throws Exception{
-        if(vTeapot.getText().matches("(?i).*[0-9,.].*")){
-            return Integer.parseInt(vTeapot.getText());
+        int temp;
+        if(vTeapot.getText().matches("(?i).*[0-9].*")){
+            temp= Integer.parseInt(vTeapot.getText());
+            if(temp>0)
+                return temp;
+            else throw new Exception("Отрицательный объём");
         }
         else throw new Exception("Неверное число в поле объём напитка");
     }
