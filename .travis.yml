@@ -3,15 +3,6 @@ language: java
 install: true
 java:
   - 11
-script:
-./mvnw clean install
- - echo my-custom-domain.ru > build/CNAME
-after_script:
- - echo "Script finished"
-after_success:
- - echo "Build was successful. $TRAVIS_TEST_RESULT"
-after_failure:
- - echo "Build was failed"
 deploy:
   provider: pages
   github-token: ff50b032957f8ecda4b439ba0c43f536deb0fdf4
