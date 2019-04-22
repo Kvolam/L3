@@ -5,7 +5,7 @@ java:
   - 11
 deploy:
   provider: pages
-  github-token: 34963b957d785ea8ddefcc0ac5271a704d448301
+  github-token: 86264d500782b2cf7aace9550f7417a2d9d7e602
   committer-from-gh: true
   skip-cleanup: true
   keep-history: true
